@@ -20,6 +20,7 @@ import { Grid } from "@material-ui/core";
 import Signup from "./pages/Signup";
 import Write from "./pages/Write";
 import DetailQuestion from "./pages/DetailQuestion";
+import CreateQuestion from "./pages/CreateQuestion";
 // import MenuIcon from "@material-ui/icons/Menu";
 
 function getModalStyle() {
@@ -70,14 +71,18 @@ const App = () => {
   const signupstyle = { fontSize: "7px" };
   return (
     <div>
-      <AppBar position="static" color="default">
+      <AppBar
+        position="static"
+        color="default"
+        style={{ backgroundColor: "rgba(255, 255, 255, 0)" }}
+      >
         <Toolbar
           style={{
             display: "flex",
             justifyContent: "space-between"
           }}
         >
-          <div style={{ marginLeft: "8%" }}>
+          <div style={{ marginLeft: "18.5%" }}>
             <Button href="/home">
               <Typography
                 variant="h6"
@@ -107,7 +112,7 @@ const App = () => {
               Q&A
             </Button>
           </div>
-          <div style={{ marginRight: "10%", color: "blue" }}>
+          <div style={{ marginRight: "19%", color: "blue" }}>
             <Button color="inherit" onClick={handleOpen}>
               로그인
             </Button>
@@ -175,16 +180,18 @@ const App = () => {
         </Toolbar>
       </AppBar>
       {/* <Route path="/" component={Home} exact={true} /> */}
-      <div style={{ marginLeft: "10%", marginRight: "10%" }}>
+      <div style={{ marginLeft: "20%", marginRight: "20%" }}>
         <Route path="/home" component={Home} />
         <Route path="/stock" component={Stock} />
         <Route path="/estate" component={Estate} />
-        <Route path="/question" component={Question} />
+        <Route path="/question" component={Question} exact={true} />
         <Route path="/fund" component={Fund} />
         <Route path="/coin" component={Coin} />
         <Route path="/signup" component={Signup} />
         <Route path="/wirte" component={Write} />
-        <Route path="/question/:id" component={DetailQuestion} />
+        <Route path="/question/:id" component={DetailQuestion} create={true} />
+        <Route path="/createquestion" component={CreateQuestion} />
+        <Route path="/question/:id/:answerid" />
       </div>
     </div>
   );

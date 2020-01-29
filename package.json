@@ -10,13 +10,13 @@
     "@testing-library/user-event": "^7.1.2",
     "auto-bind": "^4.0.0",
     "axios": "^0.19.1",
-    "material-auto-rotating-carousel": "^3.0.2",
+    "node-sass": "^4.13.1",
+    "package.json": "^2.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-material-ui-carousel": "^1.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
-    "react-swipeable-views": "^0.13.5",
     "styled-components": "^5.0.0"
   },
   "scripts": {

@@ -35,12 +35,6 @@ const News = () => {
       </a>
     </div>
   ));
-
-  // return datas.map(data => (
-  //   <div>
-  //     <h1>{data}</h1>
-  //   </div>
-  // ));
 };
 
 export default News;

@@ -28,7 +28,7 @@ const Board = ({ one }) => {
       style={{
         border: "1px solid #c8d0d0",
         borderRadius: "15px",
-        marginTop: "5px"
+        marginBottom: "15px"
       }}
     >
       <Grid item xs={1}>
@@ -38,12 +38,12 @@ const Board = ({ one }) => {
           style={{
             width: "60%",
             height: "auto",
-            marginTop: "25%",
-            marginLeft: "25%"
+            marginTop: "35%",
+            marginLeft: "30%"
           }}
         />
       </Grid>
-      <Grid item xs={8}>
+      <Grid item xs={10}>
         <StyledLink
           style={{
             color: "black"
@@ -53,6 +53,10 @@ const Board = ({ one }) => {
           <div>
             <h2>{one.title}</h2>
             <p>{one.content}</p>
+            <div style={{ display: "flex", justifyContent: "flex-end" }}>
+              <p style={{ fontSize: "10px" }}>{one.like}</p>
+              <p style={{ fontSize: "10px" }}>{one.date}</p>
+            </div>
           </div>
         </StyledLink>
       </Grid>
